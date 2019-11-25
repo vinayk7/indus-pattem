@@ -473,3 +473,24 @@ setTimeout(function () {
 
 
 }, 12000);
+
+function show_nextitem() {
+
+    var current_status = document.getElementsByClassName('fourinch')[0].style.display;
+    var arrow_el = document.getElementById("change_arrowicon");
+    var x = document.getElementsByClassName('fourinch');
+
+    var arrImg = document.getElementById('arrow_img');
+    if (current_status == "none" || current_status == "") {
+        arrImg.src = 'assets/images/up-arrow-sc.svg';
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "block";
+        }
+    } else {
+        arrImg.src = 'assets/images/down-arrow-sc.svg';
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+
+    }
+}
