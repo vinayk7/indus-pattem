@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fundoo Entertainment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/indu_global.css">
+    <style type="text/css" media="handheld">
+        /* rules for mobile devices that don't support media queries */
+        body {
+            font-size: 80%;
+        }
+    </style>
+     <script>
+            var timerStart = Date.now();
+            console.log("initialised @: %c"+ (Date.now()-timerStart) + ' ms', 'color:blue;');///DEBUG 
+
+            window.addEventListener('load', function(){
+                console.log("Page load complete@: %c "+ (Date.now()-timerStart) + ' ms ', 'color:white;background-color:darkviolet'); 
+                //alert('Page loading took: ' +  ((Date.now()-timerStart)/1000).toFixed(2) + ' seconds' )
+            });
+    </script>
+</head>
+
+<body>
+    <!-- google optimisation suggestions -->
+
+    <link rel="dns-prefetch" href="https://kme46.siteplug.com">
+    <link rel="dns-prefetch" href="https://static-02.siteplug.com">
+    <link rel="dns-prefetch" href="https://feed.dailyhunt.in">
+
+    <div class="indus_middle" id="indus_cont">
+        <div id="indus_cont_five">
+            <!--  Search Bar  -->
+            <header>
+                <div class="row_search top-buffer">
+                    <div class="search_fixed">
+                        <div class="search-bar">
+                            <div id="search" class="input-group">
+                                <input class="form-control" name="q" type="text" id="search_in_page"
+                                    placeholder="Search here.." />
+                                <div class="input-group-btn" id="search_button">
+                                    <button class="btn btn-default" id="button-icon">
+                                        <img src="./assets/images/search1.svg" alt="search"
+                                            aria-describedby="search button">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="site_suggest_box">
+                            <ul class="site_suggest_ads list-unstyled result-bucket"></ul>
+                        </div>
+                    </div>
+                </div>
+                <!--  Site Suggest  -->
+            </header>
+            <section class="indus_sections">
+                <div class="flex-container">
+                    <!--  Recommended Apps  -->
+                    <div class="vertical-center-row top-buffer recommended_app_wrap">
+                        <div id="recommended_app_section"></div>
+                    </div>
+
+                    <!--  TopNews Section  -->
+                    <div class="indus_full" id="indus_full">
+                        <ul id="all_news" class="top_news_section top-buffer"></ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" async="async"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-47795566-10" async="async"></script>
+    <script src="./assets/js/crypto-js-bundle.min.js" defer></script>
+    <script src="./assets/js/custom.js" defer></script>
+
+    <!-- search script init -->
+    <script id="search_siteplug"></script>
+    <script id="site_redirect"></script>
+
+    <!-- <script>dqs('#search_in_page').style.display = 'block'; dqs('#button-icon').style.display = 'block';</script> -->
+</body>
+
+</html>
