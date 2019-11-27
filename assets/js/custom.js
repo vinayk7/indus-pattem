@@ -382,7 +382,8 @@ function googleAds() {
             let item_1 = document.createElement("li");
             item_1.setAttribute('id', 'top_news_ads1');
             item_1.setAttribute('style', 'display:none;');
-
+            item_1.style.display = 'none';
+            
             let div__1 = document.createElement("div");
             div__1.setAttribute('id', 'div-gpt-ad-1551357349271-9');
             div__1.setAttribute('class', 'top_div1');
@@ -396,7 +397,8 @@ function googleAds() {
             let item_2 = document.createElement("li");
             item_2.setAttribute('id', 'top_news_ads2');
             item_2.setAttribute('style', 'display:none;');
-
+            item_2.style.display = 'none';
+            
             let div__2 = document.createElement("div");
             div__2.setAttribute('id', 'div-gpt-ad-1565767605361-0');
             div__2.setAttribute('class', 'top_div1');
