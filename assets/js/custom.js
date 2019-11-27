@@ -421,14 +421,21 @@ function googleAds() {
             var arrAds = ['/42115163/IP_start.indusos.com_320X100_Mobile', '/42115163/IP_start.indusos.com_300X250_Mobile'];
 
             googletag.pubads().addEventListener('slotRenderEnded', function (event) {
-                console.log('showing ads ....');
-
-                if (event.slot.getAdUnitPath() == arrAds[0]) {
-                    document.getElementById('top_news_ads1').style.display = 'block';
-                }
-
-                if (event.slot.getAdUnitPath() == arrAds[1]) {
-                    document.getElementById('top_news_ads2').style.display = 'block';
+                switch(event.slot.getAdUnitPath()){
+                    case '/42115163/IP_start.indusos.com_320X100_Mobile':
+                            console.log('Ad 1 HTML loaded@ '+  (Date.now()-timerStart) + ' ms ');
+                            document.querySelector('#div-gpt-ad-1551357349271-9 div iframe').onload = function(){ 
+                                document.getElementById('top_news_ads1').style.display = 'list-item';
+                                console.log('Ad 1 Content loaded@ '+  (Date.now()-timerStart) + ' ms ');
+                            }
+                            break;
+                    case '/42115163/IP_start.indusos.com_300X250_Mobile':
+                            console.log('Ad 2 HTML loaded@ '+  (Date.now()-timerStart) + ' ms ');
+                            document.querySelector('#div-gpt-ad-1565767605361-0 div iframe').onload = function(){
+                                document.getElementById('top_news_ads2').style.display = 'list-item';
+                                console.log('Ad 2 Content loaded@ '+  (Date.now()-timerStart) + ' ms ');
+                            }
+                            break;
                 }
             });
 
